@@ -113,7 +113,7 @@ class Dot(Sprite):
         return DotBounceCommand(self, dot)
 
 
-class FlappyGame(GameApp):
+class CommandPatternDemoApp(GameApp):
     def create_sprites(self):
         self.dots = []
         for i in range(NUM_BALLS):
@@ -194,6 +194,6 @@ if __name__ == "__main__":
  
     # do not allow window resizing
     root.resizable(False, False)
-    app = FlappyGame(root, CANVAS_WIDTH, CANVAS_HEIGHT, UPDATE_DELAY)
+    app = CommandPatternDemoApp(root, CANVAS_WIDTH, CANVAS_HEIGHT, UPDATE_DELAY)
     app.start()
     root.mainloop()
